@@ -122,10 +122,10 @@ var styles = StyleSheet.create({
         textAlign: 'center',
         color: '#333333',
         marginBottom: 5,
-    },
+    }
 });
 
-//var ExampleComponent = React.createClass({
+//var ExampleComponent = React.createClass({123
 //  render() {
 //  return (
 //      <Button

@@ -25,6 +25,8 @@ var {
 
 var kk = require('NativeModules').ImagePickerNativeMoudule_ios;
 
+var ActionSheet = requireNativeComponent('ImagePickerNativeMoudule_ios', null);
+
 var mtext='12312312321';
 var subscription = null;
 var self;
@@ -46,31 +48,41 @@ var testBridge = React.createClass({
         return (
             <View style={{flex:1,backgroundColor:'gray',flexDirection: 'column'}}>
 
-                <Text style={{width:100,height:50,backgroundColor:'red',marginTop:100,marginLeft:100}}>
-                    1231231123
-                </Text>
+                <ActionSheet style = {{flex:1,backgroundColor:'white'}}>
 
-                <TouchableOpacity onPress={function(){
-                            self._clickedMe();
-                        }}>
-
-                    <Text style={{width:100,height:50,backgroundColor:'red'}}>
-                        1231231123
-                    </Text>
-                </TouchableOpacity>
+                </ActionSheet>
 
 
             </View>
+
+
+    //        <Text style={{width:100,height:50,backgroundColor:'red',marginTop:100,marginLeft:100}}>
+    //1231231123
+    //</Text>
+    //
+    //<TouchableOpacity onPress={function(){
+    //                        self._clickedMe();
+    //                    }}>
+    //
+    //    <Text style={{width:100,height:50,backgroundColor:'red'}}>
+    //        1231231123
+    //    </Text>
+    //</TouchableOpacity>
+
+
             )
     },
     _clickedMe:function (){
-        kk.showImagePicker((error, events) => {
-            if (error) {
-                console.error(error);
-            } else {
-                console.log(events);
-            }
-        })
+        //kk.showImagePicker((error, events) => {
+        //    if (error) {
+        //        console.error(error);
+        //    } else {
+        //        console.log(events);
+        //    }
+        //})
+
+
+
     }
 });
 

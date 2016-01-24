@@ -23,9 +23,8 @@ var {
     ListView
     } = React;
 
-//var RoverBridgeModule = requireNativeComponent('RoverBridgeModule', null);
+var RoverBridgeModule = requireNativeComponent('ImagePickerNativeMoudule_ios', null);
 
-var NativeAppEventEmitter = React.NativeAppEventEmitter;
 var mtext='12312312321';
 var subscription = null;
 var self;
@@ -41,93 +40,33 @@ var region = {
 //var RoverNativeView= requireNativeComponent('MapNativeModoule_Rover', null);
 var testBridge = React.createClass({
     getInitialState: function () {
-        var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-        return {
-            dataSource: ds.cloneWithRows(this._genRows({})),
-        };
+
     },
 
     componentDidMount(){
         self = this;
-        console.log("MainPage:componentDidMount()")
-
-        //PushNotificationIOS.requestPermissions();
-
-        DeviceEventEmitter.addListener(
-            'PayNotification',
-            function(obj) {
-                console.log(obj);
-            }
-            //(obj) => console.log(obj)
-        );
-
-
-
-
     },
     render: function () {
-
         return (
-
-
-            //<ListView style={{backgroundColor:'green',flex:1}}
-            //    dataSource={this.state.dataSource}
-            //    renderRow={this._renderRow}
-            //    renderScrollComponent={props => <RecyclerViewBackedScrollView {...props} />}
-            //    />
-
             <View style={[styles.testStyle,{flexDirection: 'column'}]}>
 
                 <TouchableOpacity
-                    onPress = {
-                      ()=>{
-                          this._clickedMe();
-                      }
+                    onPresss={function(){
+                            self._toMessageList(this.num);
+                        }}>
                     }
-                    onLongPress = {"asdf"}
-
-
-                      <Text style={[styles.textStyle,{width:100,height:50}]}>
+                      <Text style={{width:100,height:50}}>
                           1231231123
                       </Text>
                 </TouchableOpacity>
-
-                <Text ref='text' style={[styles.textStyle,{marginLeft:10,width:100,height:200,backgroundColor: this.state.textBackgroundColor}]}>
-                    {mtext}
-                </Text>
-
             </View>
-            );
-
-
-
+            )
     },
     _clickedMe:function (){
-        //console.log(this.refs['text']);
-        //this.refs['text'].text='red';
-        //mtext = '111';
-        //console.log('clicked');
-        //this.setState({textBackgroundColor: 'red'})
-        //console.log(this.addNumber(1));
-        //console.log(this.addNumber(4));
-        //console.log(this.addNumber(10));
-        //console.log(this.addNumber(2));
-    },
+        var kk = require('ImagePickerNativeMoudule_ios').RoverBridgeModule;
 
-    addNumber :function (var1)
-    {
-        switch(var1){
-            case 1:
-                console.log(1);
-                break;
-            case 2:
-                console.log(2);
-                break;
-            default:
-                console.log(10);
-                break;
-        }
-    },
+        kk.showImagePicker();
+    }
 });
 
 var styles = StyleSheet.create({

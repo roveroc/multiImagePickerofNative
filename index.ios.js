@@ -18,14 +18,17 @@ var {
     DeviceEventEmitter,
     PushNotificationIOS,
     NativeAppEventEmitter,
+    TouchableOpacity,
+    TouchableHighlight,
+    ListView
     } = React;
 
-var RoverBridgeModule = requireNativeComponent('RoverBridgeModule', null);
+//var RoverBridgeModule = requireNativeComponent('RoverBridgeModule', null);
 
 var NativeAppEventEmitter = React.NativeAppEventEmitter;
-
+var mtext='12312312321';
 var subscription = null;
-
+var self;
 //var MapView = require('./MapView');
 var region = {
     latitude: 24.134844,
@@ -38,12 +41,14 @@ var region = {
 //var RoverNativeView= requireNativeComponent('MapNativeModoule_Rover', null);
 var testBridge = React.createClass({
     getInitialState: function () {
+        var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
         return {
-            loaded: false,
-            num: 0
-        }
+            dataSource: ds.cloneWithRows(this._genRows({})),
+        };
     },
+
     componentDidMount(){
+        self = this;
         console.log("MainPage:componentDidMount()")
 
         //PushNotificationIOS.requestPermissions();
@@ -61,47 +66,67 @@ var testBridge = React.createClass({
 
     },
     render: function () {
+
         return (
 
-            <View style={{backgroundColor:'gray',flex:1,alignItems:'center',justifyContent:'center'}}>
 
-                <Button
-                    style={{fontSize: 20, color: 'green',marginTop:44}}
-                    styleDisabled={{color: 'red'}}
-                    onPress={this._handlePress}
-                    >
-                    Press Me!
-                </Button>
+            //<ListView style={{backgroundColor:'green',flex:1}}
+            //    dataSource={this.state.dataSource}
+            //    renderRow={this._renderRow}
+            //    renderScrollComponent={props => <RecyclerViewBackedScrollView {...props} />}
+            //    />
 
-            </View>);
+            <View style={[styles.testStyle,{flexDirection: 'column'}]}>
 
-        //<Text style={{color:'red'}}>{this.state.num}</Text>
-        //<Button
-        //    style={{fontSize: 20, color: 'green',marginTop:44}}
-        //    styleDisabled={{color: 'red'}}
-        //    onPress={this._handlePress}
-        //    >
-        //    Press Me!
-        //</Button>
+                <TouchableOpacity
+                    onPress = {
+                      ()=>{
+                          this._clickedMe();
+                      }
+                    }
+                    onLongPress = {"asdf"}
+
+
+                      <Text style={[styles.textStyle,{width:100,height:50}]}>
+                          1231231123
+                      </Text>
+                </TouchableOpacity>
+
+                <Text ref='text' style={[styles.textStyle,{marginLeft:10,width:100,height:200,backgroundColor: this.state.textBackgroundColor}]}>
+                    {mtext}
+                </Text>
+
+            </View>
+            );
+
+
 
     },
+    _clickedMe:function (){
+        //console.log(this.refs['text']);
+        //this.refs['text'].text='red';
+        //mtext = '111';
+        //console.log('clicked');
+        //this.setState({textBackgroundColor: 'red'})
+        //console.log(this.addNumber(1));
+        //console.log(this.addNumber(4));
+        //console.log(this.addNumber(10));
+        //console.log(this.addNumber(2));
+    },
 
-    _handlePress(event) {
-
-        var kk = require('NativeModules').RoverBridgeModule;
-
-        kk.pay(region);
-
-        //kk.addNumber(111,2,(error, events) => {
-        //    if (error) {
-        //        console.error(error);
-        //    } else {
-        //        console.log(events);
-        //        this.setState({events: events});
-        //    }
-        //})
-
-        console.log('Pressed!');
+    addNumber :function (var1)
+    {
+        switch(var1){
+            case 1:
+                console.log(1);
+                break;
+            case 2:
+                console.log(2);
+                break;
+            default:
+                console.log(10);
+                break;
+        }
     },
 });
 
@@ -123,43 +148,19 @@ var styles = StyleSheet.create({
         color: '#333333',
         marginBottom: 5,
     },
+    testStyle:{
+        flex:1,
+        backgroundColor:'gray'
+    },
+    textStyle:{
+        fontFamily:'Cochin',
+        backgroundColor:'green',
+        fontSize:20,
+        color:'white',
+        marginTop:30,
+        marginLeft:50
+    }
 });
-
-//var ExampleComponent = React.createClass({
-//  render() {
-//  return (
-//      <Button
-//         style={{fontSize: 20, color: 'green',marginTop:44}}
-//         styleDisabled={{color: 'red'}}
-//         onPress={this._handlePress}
-//     >
-//         Press Me!
-//    </Button>
-//
-//
-//);
-//},
-//
-//_handlePress(event) {
-//
-//    var kk = require('NativeModules').RoverBridgeModule;
-//
-//    kk.addNumber(10,2,(error, events) => {
-//        if (error) {
-//            console.error(error);
-//        } else {
-//            console.log(events);
-//            this.setState({events: events});
-//        }
-//    })
-//
-//
-//
-//  console.log('Pressed!');
-//},
-//});
-//
-//module.exports = ExampleComponent;
 
 
 AppRegistry.registerComponent('testBridge', () => testBridge);

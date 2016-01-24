@@ -8,8 +8,10 @@
 
 #import "RCTViewManager.h"
 
-#import "QBImagePickerController.h"
+#import "ZYQAssetPickerController.h"
 
-@interface ImagePickerNativeMoudule_ios : RCTViewManager<RCTBridgeModule,QBImagePickerControllerDelegate>
+@interface ImagePickerNativeMoudule_ios : RCTViewManager<RCTBridgeModule,ZYQAssetPickerControllerDelegate>{
+	RCTResponseSenderBlock callback;
+}
 
 @end

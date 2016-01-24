@@ -63,6 +63,8 @@
 		97AFE3CE1C5471B500C4EC22 /* QBImagePickerFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AFE3C61C5471B500C4EC22 /* QBImagePickerFooterView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		97AFE3CF1C5471B500C4EC22 /* QBImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97AFE3C71C5471B500C4EC22 /* QBImagePickerController.bundle */; };
 		97AFE3D31C54749E00C4EC22 /* ImagePickerNativeMoudule_ios.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AFE3D21C54749E00C4EC22 /* ImagePickerNativeMoudule_ios.m */; };
+		97AFE40A1C54B4F800C4EC22 /* ZYQAssetPicker.Bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97AFE4071C54B4F800C4EC22 /* ZYQAssetPicker.Bundle */; };
+		97AFE40B1C54B4F800C4EC22 /* ZYQAssetPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AFE4091C54B4F800C4EC22 /* ZYQAssetPickerController.m */; };
 		97C088841C2A8FF0009501F8 /* caculete.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C088831C2A8FF0009501F8 /* caculete.m */; };
 		97C1E6111C2B864300243F5A /* MainViewConrtroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C1E60F1C2B864300243F5A /* MainViewConrtroller.m */; };
 		97C1E6121C2B864300243F5A /* MainViewConrtroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97C1E6101C2B864300243F5A /* MainViewConrtroller.xib */; };
@@ -235,6 +237,9 @@
 		97AFE3C71C5471B500C4EC22 /* QBImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QBImagePickerController.bundle; sourceTree = "<group>"; };
 		97AFE3D11C54749E00C4EC22 /* ImagePickerNativeMoudule_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerNativeMoudule_ios.h; sourceTree = "<group>"; };
 		97AFE3D21C54749E00C4EC22 /* ImagePickerNativeMoudule_ios.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerNativeMoudule_ios.m; sourceTree = "<group>"; };
+		97AFE4071C54B4F800C4EC22 /* ZYQAssetPicker.Bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZYQAssetPicker.Bundle; sourceTree = "<group>"; };
+		97AFE4081C54B4F800C4EC22 /* ZYQAssetPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYQAssetPickerController.h; sourceTree = "<group>"; };
+		97AFE4091C54B4F800C4EC22 /* ZYQAssetPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYQAssetPickerController.m; sourceTree = "<group>"; };
 		97C088821C2A8FF0009501F8 /* caculete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = caculete.h; sourceTree = "<group>"; };
 		97C088831C2A8FF0009501F8 /* caculete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = caculete.m; sourceTree = "<group>"; };
 		97C1E60E1C2B864300243F5A /* MainViewConrtroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewConrtroller.h; sourceTree = "<group>"; };
@@ -563,6 +568,7 @@
 		97AFE3AB1C54719700C4EC22 /* PickerImage */ = {
 			isa = PBXGroup;
 			children = (
+				97AFE3FC1C54B4E300C4EC22 /* tow */,
 				97AFE3B61C5471B500C4EC22 /* QBImagePickerController.h */,
 				97AFE3B71C5471B500C4EC22 /* QBImagePickerController.m */,
 				97AFE3B81C5471B500C4EC22 /* QBImagePickerGroupCell.h */,
@@ -592,6 +598,16 @@
 				97AFE3D21C54749E00C4EC22 /* ImagePickerNativeMoudule_ios.m */,
 			);
 			name = PickerImageNativeModule;
+			sourceTree = "<group>";
+		};
+		97AFE3FC1C54B4E300C4EC22 /* tow */ = {
+			isa = PBXGroup;
+			children = (
+				97AFE4071C54B4F800C4EC22 /* ZYQAssetPicker.Bundle */,
+				97AFE4081C54B4F800C4EC22 /* ZYQAssetPickerController.h */,
+				97AFE4091C54B4F800C4EC22 /* ZYQAssetPickerController.m */,
+			);
+			name = tow;
 			sourceTree = "<group>";
 		};
 		97CC864E1C23ACD0002B9A9B /* RoverMapNativeModoule */ = {
@@ -853,6 +869,7 @@
 			files = (
 				978235D61C34FFF50009222E /* AlipaySDK.bundle in Resources */,
 				97C1E61E1C2B88D300243F5A /* Podfile in Resources */,
+				97AFE40A1C54B4F800C4EC22 /* ZYQAssetPicker.Bundle in Resources */,
 				97CC865F1C23E937002B9A9B /* power_off.png in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				97C1E6121C2B864300243F5A /* MainViewConrtroller.xib in Resources */,
@@ -936,6 +953,7 @@
 				97AFE3CC1C5471B500C4EC22 /* QBImagePickerAssetView.m in Sources */,
 				97AFE3CD1C5471B500C4EC22 /* QBImagePickerVideoInfoView.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				97AFE40B1C54B4F800C4EC22 /* ZYQAssetPickerController.m in Sources */,
 				97AFE3CB1C5471B500C4EC22 /* QBImagePickerAssetCell.m in Sources */,
 				97AFE3CE1C5471B500C4EC22 /* QBImagePickerFooterView.m in Sources */,
 				97C2536A1C22C56200EFC685 /* ConvertDateNativeToOC.m in Sources */,

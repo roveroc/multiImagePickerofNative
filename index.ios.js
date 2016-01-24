@@ -23,7 +23,7 @@ var {
     ListView
     } = React;
 
-var RoverBridgeModule = requireNativeComponent('ImagePickerNativeMoudule_ios', null);
+var kk = require('NativeModules').ImagePickerNativeMoudule_ios;
 
 var mtext='12312312321';
 var subscription = null;
@@ -39,33 +39,38 @@ var region = {
 
 //var RoverNativeView= requireNativeComponent('MapNativeModoule_Rover', null);
 var testBridge = React.createClass({
-    getInitialState: function () {
-
-    },
-
     componentDidMount(){
         self = this;
     },
     render: function () {
         return (
-            <View style={[styles.testStyle,{flexDirection: 'column'}]}>
+            <View style={{flex:1,backgroundColor:'gray',flexDirection: 'column'}}>
 
-                <TouchableOpacity
-                    onPresss={function(){
-                            self._toMessageList(this.num);
+                <Text style={{width:100,height:50,backgroundColor:'red',marginTop:100,marginLeft:100}}>
+                    1231231123
+                </Text>
+
+                <TouchableOpacity onPress={function(){
+                            self._clickedMe();
                         }}>
-                    }
-                      <Text style={{width:100,height:50}}>
-                          1231231123
-                      </Text>
+
+                    <Text style={{width:100,height:50,backgroundColor:'red'}}>
+                        1231231123
+                    </Text>
                 </TouchableOpacity>
+
+
             </View>
             )
     },
     _clickedMe:function (){
-        var kk = require('ImagePickerNativeMoudule_ios').RoverBridgeModule;
-
-        kk.showImagePicker();
+        kk.showImagePicker((error, events) => {
+            if (error) {
+                console.error(error);
+            } else {
+                console.log(events);
+            }
+        })
     }
 });
 

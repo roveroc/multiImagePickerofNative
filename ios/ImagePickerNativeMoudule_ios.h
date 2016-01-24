@@ -10,7 +10,7 @@
 
 #import "ZYQAssetPickerController.h"
 
-@interface ImagePickerNativeMoudule_ios : RCTViewManager<RCTBridgeModule,ZYQAssetPickerControllerDelegate>{
+@interface ImagePickerNativeMoudule_ios : RCTViewManager<RCTBridgeModule,ZYQAssetPickerControllerDelegate,UIActionSheetDelegate>{
 	RCTResponseSenderBlock callback;
 }
 

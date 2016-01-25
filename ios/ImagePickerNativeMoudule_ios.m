@@ -7,7 +7,6 @@
 //
 
 #import "ImagePickerNativeMoudule_ios.h"
-#import "UIImage+XG.h"
 
 @interface ImagePickerNativeMoudule_ios ()
 
@@ -50,12 +49,6 @@ RCT_EXPORT_MODULE()     //必须导入Native的该宏，想当于声明这个类
 	[self.sheet removeFromSuperview];
 }
 
-- (void)assetPickerIsMax{
-	
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"最多可以选择9张图片" delegate:self cancelButtonTitle:nil otherButtonTitles:@"好的", nil];
-	[alert show];
-}
-
 
 RCT_EXPORT_METHOD(showImagePicker:(RCTResponseSenderBlock)cback){
 	dispatch_async(dispatch_get_main_queue(), ^{
@@ -78,7 +71,7 @@ RCT_EXPORT_METHOD(pickFromLibribry:(RCTResponseSenderBlock)cback){
 	
 	NSLog(@"callbacj = %@",self.callback);
 	ZYQAssetPickerController *picker = [[ZYQAssetPickerController alloc] init];
-	picker.maximumNumberOfSelection = 1;
+	picker.maximumNumberOfSelection = 5;  //设置图片最多可选择数量
 	picker.assetsFilter = [ALAssetsFilter allPhotos];
 	picker.showEmptyGroups=NO;
 	picker.delegate = self;
@@ -104,20 +97,19 @@ RCT_EXPORT_METHOD(takePhoto:(RCTResponseSenderBlock)cback){
 	[[UIApplication sharedApplication].windows[0].rootViewController presentViewController:takePhotoCon animated:YES completion:NULL];
 }
 
-#pragma mark 照片完成后，上传
+#pragma mark 照片完成后，相机返回
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
 	[self.takePhotoCon dismissViewControllerAnimated:YES completion:nil];
 	UIImage *timage=[info objectForKey:UIImagePickerControllerEditedImage];
 	NSData *data = UIImageJPEGRepresentation(timage, 0.1);
 	NSString *myString1 = [data base64Encoding];
-	NSLog(@"myString1 = %@",myString1);
 	NSMutableArray *imageArr = [[NSMutableArray alloc] init];
 	[imageArr addObject:myString1];
 
 	self.callback(@[@{@"photos":imageArr}]);
 }
 
-#pragma mark - ZYQAssetPickerController Delegate
+#pragma mark 照片完成后，图库返回
 -(void)assetPickerController:(ZYQAssetPickerController *)picker didFinishPickingAssets:(NSArray *)assets{
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 		NSMutableArray *imageArr = [[NSMutableArray alloc] init];
@@ -126,7 +118,6 @@ RCT_EXPORT_METHOD(takePhoto:(RCTResponseSenderBlock)cback){
 			UIImage *img = [UIImage imageWithCGImage:asset.defaultRepresentation.fullScreenImage];
 			NSData *data = UIImageJPEGRepresentation(img, 0.1);
 			NSString *myString1 = [data base64Encoding];
-			NSLog(@"myString1 = %@",myString1);
 			[imageArr addObject:myString1];
 		}
 		self.callback(@[@{@"photos":imageArr}]);

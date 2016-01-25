@@ -23,8 +23,6 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		6BF28BB9FC93158EFCD789AF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB2CDA7A0E9FA25F511AF27 /* libPods.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		9742E2AB1C215C1A001BF90C /* RoverBridgeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9742E2A81C215C1A001BF90C /* RoverBridgeModule.m */; };
-		9742E2AC1C215C1A001BF90C /* RoverNativeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9742E2AA1C215C1A001BF90C /* RoverNativeView.m */; };
 		9771D3C81C34D47900B443E6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9771D3C71C34D47900B443E6 /* Security.framework */; };
 		9771D3CA1C34D54600B443E6 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9771D3C91C34D54600B443E6 /* libsqlite3.0.tbd */; };
 		9771D3CC1C34D54F00B443E6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9771D3CB1C34D54F00B443E6 /* libz.tbd */; };
@@ -41,31 +39,13 @@
 		9771D41E1C34DB2000B443E6 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9771D41D1C34DB2000B443E6 /* MessageUI.framework */; };
 		9771D4201C34DB2C00B443E6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9771D41F1C34DB2C00B443E6 /* MobileCoreServices.framework */; };
 		9771D4221C34DB3200B443E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9771D4211C34DB3200B443E6 /* QuartzCore.framework */; };
-		978235D61C34FFF50009222E /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 978235C21C34FFF50009222E /* AlipaySDK.bundle */; };
-		978235D71C34FFF50009222E /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 978235C31C34FFF50009222E /* AlipaySDK.framework */; };
-		978235D81C34FFF50009222E /* libpingpp+alipay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 978235C41C34FFF50009222E /* libpingpp+alipay.a */; };
-		978235D91C34FFF50009222E /* libpingpp+network.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 978235C61C34FFF50009222E /* libpingpp+network.a */; };
-		978235DA1C34FFF50009222E /* libpingpp+up.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 978235C91C34FFF50009222E /* libpingpp+up.a */; };
-		978235DB1C34FFF50009222E /* libUPPayPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 978235CA1C34FFF50009222E /* libUPPayPlugin.a */; };
-		978235DC1C34FFF50009222E /* libpingpp+wx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 978235CC1C34FFF50009222E /* libpingpp+wx.a */; };
-		978235DD1C34FFF50009222E /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 978235CD1C34FFF50009222E /* libWeChatSDK.a */; };
-		978235DE1C34FFF50009222E /* libpingppcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 978235D01C34FFF50009222E /* libpingppcore.a */; };
-		978235DF1C34FFF50009222E /* libpingpp+one.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 978235D21C34FFF50009222E /* libpingpp+one.a */; };
-		978235E01C34FFF50009222E /* Pingpp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 978235D41C34FFF50009222E /* Pingpp.bundle */; };
 		978759771C2B8F02004A95DA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 978759761C2B8F02004A95DA /* CFNetwork.framework */; };
 		9787598E1C2BDB9F004A95DA /* RCTPushNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9787598D1C2BDB9F004A95DA /* RCTPushNotificationManager.m */; };
 		97AFE3D31C54749E00C4EC22 /* ImagePickerNativeMoudule_ios.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AFE3D21C54749E00C4EC22 /* ImagePickerNativeMoudule_ios.m */; };
 		97AFE40A1C54B4F800C4EC22 /* ZYQAssetPicker.Bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97AFE4071C54B4F800C4EC22 /* ZYQAssetPicker.Bundle */; };
 		97AFE40B1C54B4F800C4EC22 /* ZYQAssetPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AFE4091C54B4F800C4EC22 /* ZYQAssetPickerController.m */; };
-		97AFE4181C54C7F000C4EC22 /* UIImage+XG.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AFE4171C54C7F000C4EC22 /* UIImage+XG.m */; };
-		97C088841C2A8FF0009501F8 /* caculete.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C088831C2A8FF0009501F8 /* caculete.m */; };
-		97C1E6111C2B864300243F5A /* MainViewConrtroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C1E60F1C2B864300243F5A /* MainViewConrtroller.m */; };
-		97C1E6121C2B864300243F5A /* MainViewConrtroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97C1E6101C2B864300243F5A /* MainViewConrtroller.xib */; };
+		97AFE46A1C55F23C00C4EC22 /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = 97AFE4691C55F23C00C4EC22 /* ReadMe */; };
 		97C1E61E1C2B88D300243F5A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 97C1E61D1C2B88D300243F5A /* Podfile */; };
-		97C2536A1C22C56200EFC685 /* ConvertDateNativeToOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C253691C22C56200EFC685 /* ConvertDateNativeToOC.m */; };
-		97CC865B1C23AD3C002B9A9B /* MapNativeModoule_Rover.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CC865A1C23AD3C002B9A9B /* MapNativeModoule_Rover.m */; };
-		97CC865F1C23E937002B9A9B /* power_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CC865E1C23E937002B9A9B /* power_off.png */; };
-		97FEB1D71C30D60300CF7EA2 /* KukuHttpRequst.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FEB1D61C30D60300CF7EA2 /* KukuHttpRequst.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,10 +151,6 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8865127307BF732FA059B13A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		9742E2A71C215C1A001BF90C /* RoverBridgeModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoverBridgeModule.h; sourceTree = "<group>"; };
-		9742E2A81C215C1A001BF90C /* RoverBridgeModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoverBridgeModule.m; sourceTree = "<group>"; };
-		9742E2A91C215C1A001BF90C /* RoverNativeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoverNativeView.h; sourceTree = "<group>"; };
-		9742E2AA1C215C1A001BF90C /* RoverNativeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoverNativeView.m; sourceTree = "<group>"; };
 		9771D3C71C34D47900B443E6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9771D3C91C34D54600B443E6 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		9771D3CB1C34D54F00B443E6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -191,22 +167,6 @@
 		9771D41D1C34DB2000B443E6 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9771D41F1C34DB2C00B443E6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		9771D4211C34DB3200B443E6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		978235C21C34FFF50009222E /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
-		978235C31C34FFF50009222E /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
-		978235C41C34FFF50009222E /* libpingpp+alipay.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+alipay.a"; sourceTree = "<group>"; };
-		978235C61C34FFF50009222E /* libpingpp+network.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+network.a"; sourceTree = "<group>"; };
-		978235C71C34FFF50009222E /* PingppURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingppURLResponse.h; sourceTree = "<group>"; };
-		978235C91C34FFF50009222E /* libpingpp+up.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+up.a"; sourceTree = "<group>"; };
-		978235CA1C34FFF50009222E /* libUPPayPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUPPayPlugin.a; sourceTree = "<group>"; };
-		978235CC1C34FFF50009222E /* libpingpp+wx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+wx.a"; sourceTree = "<group>"; };
-		978235CD1C34FFF50009222E /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		978235CE1C34FFF50009222E /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		978235CF1C34FFF50009222E /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		978235D01C34FFF50009222E /* libpingppcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpingppcore.a; sourceTree = "<group>"; };
-		978235D21C34FFF50009222E /* libpingpp+one.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+one.a"; sourceTree = "<group>"; };
-		978235D31C34FFF50009222E /* Pingpp+One.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pingpp+One.h"; sourceTree = "<group>"; };
-		978235D41C34FFF50009222E /* Pingpp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Pingpp.bundle; sourceTree = "<group>"; };
-		978235D51C34FFF50009222E /* Pingpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pingpp.h; sourceTree = "<group>"; };
 		978759761C2B8F02004A95DA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		9787598C1C2BDB9F004A95DA /* RCTPushNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTPushNotificationManager.h; sourceTree = "<group>"; };
 		9787598D1C2BDB9F004A95DA /* RCTPushNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTPushNotificationManager.m; sourceTree = "<group>"; };
@@ -215,21 +175,8 @@
 		97AFE4071C54B4F800C4EC22 /* ZYQAssetPicker.Bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZYQAssetPicker.Bundle; sourceTree = "<group>"; };
 		97AFE4081C54B4F800C4EC22 /* ZYQAssetPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYQAssetPickerController.h; sourceTree = "<group>"; };
 		97AFE4091C54B4F800C4EC22 /* ZYQAssetPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYQAssetPickerController.m; sourceTree = "<group>"; };
-		97AFE4161C54C7F000C4EC22 /* UIImage+XG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XG.h"; sourceTree = "<group>"; };
-		97AFE4171C54C7F000C4EC22 /* UIImage+XG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XG.m"; sourceTree = "<group>"; };
-		97C088821C2A8FF0009501F8 /* caculete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = caculete.h; sourceTree = "<group>"; };
-		97C088831C2A8FF0009501F8 /* caculete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = caculete.m; sourceTree = "<group>"; };
-		97C1E60E1C2B864300243F5A /* MainViewConrtroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewConrtroller.h; sourceTree = "<group>"; };
-		97C1E60F1C2B864300243F5A /* MainViewConrtroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewConrtroller.m; sourceTree = "<group>"; };
-		97C1E6101C2B864300243F5A /* MainViewConrtroller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewConrtroller.xib; sourceTree = "<group>"; };
+		97AFE4691C55F23C00C4EC22 /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
 		97C1E61D1C2B88D300243F5A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		97C253681C22C56200EFC685 /* ConvertDateNativeToOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvertDateNativeToOC.h; sourceTree = "<group>"; };
-		97C253691C22C56200EFC685 /* ConvertDateNativeToOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvertDateNativeToOC.m; sourceTree = "<group>"; };
-		97CC86591C23AD3C002B9A9B /* MapNativeModoule_Rover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapNativeModoule_Rover.h; sourceTree = "<group>"; };
-		97CC865A1C23AD3C002B9A9B /* MapNativeModoule_Rover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapNativeModoule_Rover.m; sourceTree = "<group>"; };
-		97CC865E1C23E937002B9A9B /* power_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = power_off.png; sourceTree = "<group>"; };
-		97FEB1D51C30D60300CF7EA2 /* KukuHttpRequst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KukuHttpRequst.h; sourceTree = "<group>"; };
-		97FEB1D61C30D60300CF7EA2 /* KukuHttpRequst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KukuHttpRequst.m; sourceTree = "<group>"; };
 		FEB2CDA7A0E9FA25F511AF27 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -246,8 +193,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9771D4221C34DB3200B443E6 /* QuartzCore.framework in Frameworks */,
-				978235D81C34FFF50009222E /* libpingpp+alipay.a in Frameworks */,
-				978235DC1C34FFF50009222E /* libpingpp+wx.a in Frameworks */,
 				9771D4201C34DB2C00B443E6 /* MobileCoreServices.framework in Frameworks */,
 				9771D41E1C34DB2000B443E6 /* MessageUI.framework in Frameworks */,
 				9771D41C1C34DB1500B443E6 /* MapKit.framework in Frameworks */,
@@ -255,19 +200,13 @@
 				9771D4181C34DAFE00B443E6 /* CoreGraphics.framework in Frameworks */,
 				9771D4161C34DAF100B443E6 /* CoreAudio.framework in Frameworks */,
 				9771D4141C34DAE900B443E6 /* AudioToolbox.framework in Frameworks */,
-				978235D91C34FFF50009222E /* libpingpp+network.a in Frameworks */,
 				9771D4111C34DADE00B443E6 /* AddressBook.framework in Frameworks */,
 				9771D4121C34DADE00B443E6 /* AddressBookUI.framework in Frameworks */,
 				9771D40E1C34DAD600B443E6 /* CoreTelephony.framework in Frameworks */,
-				978235DD1C34FFF50009222E /* libWeChatSDK.a in Frameworks */,
-				978235D71C34FFF50009222E /* AlipaySDK.framework in Frameworks */,
 				9771D4021C34DACF00B443E6 /* libstdc++.tbd in Frameworks */,
 				9771D3CE1C34D55D00B443E6 /* libc++.tbd in Frameworks */,
 				9771D3CC1C34D54F00B443E6 /* libz.tbd in Frameworks */,
-				978235DF1C34FFF50009222E /* libpingpp+one.a in Frameworks */,
 				9771D3CA1C34D54600B443E6 /* libsqlite3.0.tbd in Frameworks */,
-				978235DE1C34FFF50009222E /* libpingppcore.a in Frameworks */,
-				978235DA1C34FFF50009222E /* libpingpp+up.a in Frameworks */,
 				9771D3C81C34D47900B443E6 /* Security.framework in Frameworks */,
 				978759771C2B8F02004A95DA /* CFNetwork.framework in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -277,7 +216,6 @@
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
-				978235DB1C34FFF50009222E /* libUPPayPlugin.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
@@ -429,20 +367,10 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				97AFE4691C55F23C00C4EC22 /* ReadMe */,
 				97AFE3D01C54738600C4EC22 /* PickerImageNativeModule */,
 				97AFE3AB1C54719700C4EC22 /* PickerImage */,
-				9771D3E31C34D95500B443E6 /* ping++SDK */,
 				97C1E61D1C2B88D300243F5A /* Podfile */,
-				97FEB1D51C30D60300CF7EA2 /* KukuHttpRequst.h */,
-				97FEB1D61C30D60300CF7EA2 /* KukuHttpRequst.m */,
-				97C1E60E1C2B864300243F5A /* MainViewConrtroller.h */,
-				97C1E60F1C2B864300243F5A /* MainViewConrtroller.m */,
-				97C1E6101C2B864300243F5A /* MainViewConrtroller.xib */,
-				97C088821C2A8FF0009501F8 /* caculete.h */,
-				97C088831C2A8FF0009501F8 /* caculete.m */,
-				97CC865E1C23E937002B9A9B /* power_off.png */,
-				97CC865D1C23D7FB002B9A9B /* TestCode(noUse) */,
-				97CC864E1C23ACD0002B9A9B /* RoverMapNativeModoule */,
 				13B07FAE1A68108700A75B9A /* testBridge */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* testBridgeTests */,
@@ -463,89 +391,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9771D3E31C34D95500B443E6 /* ping++SDK */ = {
-			isa = PBXGroup;
-			children = (
-				978235BF1C34FFF50009222E /* lib */,
-			);
-			name = "ping++SDK";
-			sourceTree = "<group>";
-		};
-		978235BF1C34FFF50009222E /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				978235C01C34FFF50009222E /* Channels */,
-				978235D01C34FFF50009222E /* libpingppcore.a */,
-				978235D11C34FFF50009222E /* One */,
-				978235D41C34FFF50009222E /* Pingpp.bundle */,
-				978235D51C34FFF50009222E /* Pingpp.h */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		978235C01C34FFF50009222E /* Channels */ = {
-			isa = PBXGroup;
-			children = (
-				978235C11C34FFF50009222E /* Alipay */,
-				978235C51C34FFF50009222E /* Network */,
-				978235C81C34FFF50009222E /* UnionPay */,
-				978235CB1C34FFF50009222E /* Wx */,
-			);
-			path = Channels;
-			sourceTree = "<group>";
-		};
-		978235C11C34FFF50009222E /* Alipay */ = {
-			isa = PBXGroup;
-			children = (
-				978235C21C34FFF50009222E /* AlipaySDK.bundle */,
-				978235C31C34FFF50009222E /* AlipaySDK.framework */,
-				978235C41C34FFF50009222E /* libpingpp+alipay.a */,
-			);
-			path = Alipay;
-			sourceTree = "<group>";
-		};
-		978235C51C34FFF50009222E /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				978235C61C34FFF50009222E /* libpingpp+network.a */,
-				978235C71C34FFF50009222E /* PingppURLResponse.h */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		978235C81C34FFF50009222E /* UnionPay */ = {
-			isa = PBXGroup;
-			children = (
-				978235C91C34FFF50009222E /* libpingpp+up.a */,
-				978235CA1C34FFF50009222E /* libUPPayPlugin.a */,
-			);
-			path = UnionPay;
-			sourceTree = "<group>";
-		};
-		978235CB1C34FFF50009222E /* Wx */ = {
-			isa = PBXGroup;
-			children = (
-				978235CC1C34FFF50009222E /* libpingpp+wx.a */,
-				978235CD1C34FFF50009222E /* libWeChatSDK.a */,
-				978235CE1C34FFF50009222E /* WXApi.h */,
-				978235CF1C34FFF50009222E /* WXApiObject.h */,
-			);
-			path = Wx;
-			sourceTree = "<group>";
-		};
-		978235D11C34FFF50009222E /* One */ = {
-			isa = PBXGroup;
-			children = (
-				978235D21C34FFF50009222E /* libpingpp+one.a */,
-				978235D31C34FFF50009222E /* Pingpp+One.h */,
-			);
-			path = One;
-			sourceTree = "<group>";
-		};
 		97AFE3AB1C54719700C4EC22 /* PickerImage */ = {
 			isa = PBXGroup;
 			children = (
-				97AFE3FC1C54B4E300C4EC22 /* tow */,
+				97AFE3FC1C54B4E300C4EC22 /* lib */,
 			);
 			name = PickerImage;
 			sourceTree = "<group>";
@@ -553,52 +402,20 @@
 		97AFE3D01C54738600C4EC22 /* PickerImageNativeModule */ = {
 			isa = PBXGroup;
 			children = (
-				97AFE4161C54C7F000C4EC22 /* UIImage+XG.h */,
-				97AFE4171C54C7F000C4EC22 /* UIImage+XG.m */,
 				97AFE3D11C54749E00C4EC22 /* ImagePickerNativeMoudule_ios.h */,
 				97AFE3D21C54749E00C4EC22 /* ImagePickerNativeMoudule_ios.m */,
 			);
 			name = PickerImageNativeModule;
 			sourceTree = "<group>";
 		};
-		97AFE3FC1C54B4E300C4EC22 /* tow */ = {
+		97AFE3FC1C54B4E300C4EC22 /* lib */ = {
 			isa = PBXGroup;
 			children = (
 				97AFE4071C54B4F800C4EC22 /* ZYQAssetPicker.Bundle */,
 				97AFE4081C54B4F800C4EC22 /* ZYQAssetPickerController.h */,
 				97AFE4091C54B4F800C4EC22 /* ZYQAssetPickerController.m */,
 			);
-			name = tow;
-			sourceTree = "<group>";
-		};
-		97CC864E1C23ACD0002B9A9B /* RoverMapNativeModoule */ = {
-			isa = PBXGroup;
-			children = (
-				97CC865C1C23AD63002B9A9B /* ConvertDataNativeToOC */,
-				97CC86591C23AD3C002B9A9B /* MapNativeModoule_Rover.h */,
-				97CC865A1C23AD3C002B9A9B /* MapNativeModoule_Rover.m */,
-			);
-			name = RoverMapNativeModoule;
-			sourceTree = "<group>";
-		};
-		97CC865C1C23AD63002B9A9B /* ConvertDataNativeToOC */ = {
-			isa = PBXGroup;
-			children = (
-				97C253681C22C56200EFC685 /* ConvertDateNativeToOC.h */,
-				97C253691C22C56200EFC685 /* ConvertDateNativeToOC.m */,
-			);
-			name = ConvertDataNativeToOC;
-			sourceTree = "<group>";
-		};
-		97CC865D1C23D7FB002B9A9B /* TestCode(noUse) */ = {
-			isa = PBXGroup;
-			children = (
-				9742E2A71C215C1A001BF90C /* RoverBridgeModule.h */,
-				9742E2A81C215C1A001BF90C /* RoverBridgeModule.m */,
-				9742E2A91C215C1A001BF90C /* RoverNativeView.h */,
-				9742E2AA1C215C1A001BF90C /* RoverNativeView.m */,
-			);
-			name = "TestCode(noUse)";
+			name = lib;
 			sourceTree = "<group>";
 		};
 		C391AA9E34E70886EAD4C3D4 /* Frameworks */ = {
@@ -828,14 +645,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				978235D61C34FFF50009222E /* AlipaySDK.bundle in Resources */,
+				97AFE46A1C55F23C00C4EC22 /* ReadMe in Resources */,
 				97C1E61E1C2B88D300243F5A /* Podfile in Resources */,
 				97AFE40A1C54B4F800C4EC22 /* ZYQAssetPicker.Bundle in Resources */,
-				97CC865F1C23E937002B9A9B /* power_off.png in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				97C1E6121C2B864300243F5A /* MainViewConrtroller.xib in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				978235E01C34FFF50009222E /* Pingpp.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -902,17 +716,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				97AFE3D31C54749E00C4EC22 /* ImagePickerNativeMoudule_ios.m in Sources */,
-				97AFE4181C54C7F000C4EC22 /* UIImage+XG.m in Sources */,
-				97C088841C2A8FF0009501F8 /* caculete.m in Sources */,
-				97FEB1D71C30D60300CF7EA2 /* KukuHttpRequst.m in Sources */,
-				97CC865B1C23AD3C002B9A9B /* MapNativeModoule_Rover.m in Sources */,
-				9742E2AC1C215C1A001BF90C /* RoverNativeView.m in Sources */,
 				9787598E1C2BDB9F004A95DA /* RCTPushNotificationManager.m in Sources */,
-				9742E2AB1C215C1A001BF90C /* RoverBridgeModule.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				97AFE40B1C54B4F800C4EC22 /* ZYQAssetPickerController.m in Sources */,
-				97C2536A1C22C56200EFC685 /* ConvertDateNativeToOC.m in Sources */,
-				97C1E6111C2B864300243F5A /* MainViewConrtroller.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

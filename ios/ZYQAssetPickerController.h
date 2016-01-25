@@ -49,9 +49,6 @@
 -(void)assetPickerControllerDidMaximum:(ZYQAssetPickerController *)picker;
 
 -(void)assetPickerControllerDidMinimum:(ZYQAssetPickerController *)picker;
-
--(void)assetPickerIsMax;
-
 @end
 
 #pragma mark - ZYQAssetViewController

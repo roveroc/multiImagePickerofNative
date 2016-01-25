@@ -1,0 +1,10 @@
+/*
+
+注：该Demo是在原生的Xcode项目中使用CocoaPod导入Native框架运行，图片多选的功能使用到网上找的该开源文件：ZYQAssetPickerController，作者：heroims
+	  有问题，请在github上留言。
+
+	 Demo支持相册和相机，图片支持多选，变量：maximumNumberOfSelection，用来设定最大支持选择的图片数，选择完成后将图片转成base64string放入数组通过
+   callback传给Js使用。
+
+
+*/

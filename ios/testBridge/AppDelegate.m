@@ -8,11 +8,7 @@
  */
 
 #import "AppDelegate.h"
-
 #import "RCTRootView.h"
-#import "MainViewConrtroller.h"
-
-#import "KukuHttpRequst.h"
 
 @implementation AppDelegate
 
@@ -48,18 +44,11 @@
                                                       moduleName:@"testBridge"
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
-  
-  [KukuHttpRequst shareInstance].rootView = rootView;
-  
-  
-  
-  MainViewConrtroller *mainCon = [[MainViewConrtroller alloc] init];
-
+	
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
-//  self.window.rootViewController = mainCon;
   [self.window makeKeyAndVisible];
   return YES;
 }

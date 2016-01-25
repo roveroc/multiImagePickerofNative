@@ -580,8 +580,6 @@ static UIColor *titleColor;
             [vc.delegate assetPickerControllerDidMaximum:vc];
         }
     }
-		[vc.delegate assetPickerIsMax];
-	
     return (selectable && _indexPathsForSelectedItems.count < vc.maximumNumberOfSelection);
 }
 

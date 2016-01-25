@@ -50,6 +50,8 @@
 
 -(void)assetPickerControllerDidMinimum:(ZYQAssetPickerController *)picker;
 
+-(void)assetPickerIsMax;
+
 @end
 
 #pragma mark - ZYQAssetViewController

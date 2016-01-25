@@ -9,34 +9,17 @@
 #import "ImagePickerNativeMoudule_ios.h"
 #import "UIImage+XG.h"
 
+@interface ImagePickerNativeMoudule_ios ()
+
+@property (nonatomic, strong) RCTResponseSenderBlock callback;
+
+@end
 
 @implementation ImagePickerNativeMoudule_ios
 @synthesize sheet;
 @synthesize takePhotoCon;
 
 RCT_EXPORT_MODULE()     //必须导入Native的该宏，想当于声明这个类要实现自定义模块的功能
-
-#pragma mark - 该方法想当于重写
-- (UIView *)view{
-
-	if([self.sheet isVisible]){
-		return nil;
-	}
-
-		self.sheet.delegate =self;
-		
-		// 判断是否支持相机
-		if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
-		{
-				self.sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:nil destructiveButtonTitle:@"取消"otherButtonTitles:@"拍照", @"从相册选", nil];
-		}
-		else
-		{
-			self.sheet = [[UIActionSheet alloc] initWithTitle:@"选择图像" delegate:self cancelButtonTitle:nil destructiveButtonTitle:@"取消" otherButtonTitles:@"从相册选", nil];
-		}
-		[self.sheet showInView:[UIApplication sharedApplication].windows[0].rootViewController.view];
-		return self.sheet;
-}
 
 #pragma mark - action sheet delegte
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -47,11 +30,11 @@ RCT_EXPORT_MODULE()     //必须导入Native的该宏，想当于声明这个类
 				case 0:
 					return;
 				case 1:{ //相机
-					[self takePhoto:callback];
+					[self takePhoto:self.callback];
 				}
 					break;
 				case 2:{ //相册
-					[self showImagePicker:callback];
+					[self pickFromLibribry:self.callback];
 				}
 					break;
 			}
@@ -67,11 +50,35 @@ RCT_EXPORT_MODULE()     //必须导入Native的该宏，想当于声明这个类
 	[self.sheet removeFromSuperview];
 }
 
+- (void)assetPickerIsMax{
+	
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"最多可以选择9张图片" delegate:self cancelButtonTitle:nil otherButtonTitles:@"好的", nil];
+	[alert show];
+}
+
 
 RCT_EXPORT_METHOD(showImagePicker:(RCTResponseSenderBlock)cback){
-	callback = cback;
+	dispatch_async(dispatch_get_main_queue(), ^{
+		self.callback = cback;
+		self.sheet.delegate =self;
+		// 判断是否支持相机
+		if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+		{
+			self.sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:nil destructiveButtonTitle:@"取消"otherButtonTitles:@"拍照", @"从相册选", nil];
+		}
+		else
+		{
+			self.sheet = [[UIActionSheet alloc] initWithTitle:@"选择图像" delegate:self cancelButtonTitle:nil destructiveButtonTitle:@"取消" otherButtonTitles:@"从相册选", nil];
+		}
+		[self.sheet showInView:[UIApplication sharedApplication].windows[0].rootViewController.view];
+	});
+}
+
+RCT_EXPORT_METHOD(pickFromLibribry:(RCTResponseSenderBlock)cback){
+	
+	NSLog(@"callbacj = %@",self.callback);
 	ZYQAssetPickerController *picker = [[ZYQAssetPickerController alloc] init];
-	picker.maximumNumberOfSelection = 10;
+	picker.maximumNumberOfSelection = 1;
 	picker.assetsFilter = [ALAssetsFilter allPhotos];
 	picker.showEmptyGroups=NO;
 	picker.delegate = self;
@@ -93,7 +100,6 @@ RCT_EXPORT_METHOD(takePhoto:(RCTResponseSenderBlock)cback){
 	self.takePhotoCon.allowsEditing = YES;
 	self.takePhotoCon.sourceType = UIImagePickerControllerSourceTypeCamera;
 	self.takePhotoCon.videoQuality = UIImagePickerControllerQualityTypeLow ;
-	
 
 	[[UIApplication sharedApplication].windows[0].rootViewController presentViewController:takePhotoCon animated:YES completion:NULL];
 }
@@ -108,7 +114,7 @@ RCT_EXPORT_METHOD(takePhoto:(RCTResponseSenderBlock)cback){
 	NSMutableArray *imageArr = [[NSMutableArray alloc] init];
 	[imageArr addObject:myString1];
 
-	callback(@[@{@"photos":imageArr}]);
+	self.callback(@[@{@"photos":imageArr}]);
 }
 
 #pragma mark - ZYQAssetPickerController Delegate
@@ -118,15 +124,12 @@ RCT_EXPORT_METHOD(takePhoto:(RCTResponseSenderBlock)cback){
 		for (int i=0; i<assets.count; i++) {
 			ALAsset *asset=assets[i];
 			UIImage *img = [UIImage imageWithCGImage:asset.defaultRepresentation.fullScreenImage];
-			
-			UIImage *tempImg = [img imageByScalingAndCroppingForSize:CGSizeMake(500, 500)];
-			
-			NSData *data = UIImageJPEGRepresentation(tempImg, 0.1);
+			NSData *data = UIImageJPEGRepresentation(img, 0.1);
 			NSString *myString1 = [data base64Encoding];
 			NSLog(@"myString1 = %@",myString1);
 			[imageArr addObject:myString1];
 		}
-		callback(@[@{@"photos":imageArr}]);
+		self.callback(@[@{@"photos":imageArr}]);
 	});
 }
 

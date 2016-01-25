@@ -48,41 +48,36 @@ var testBridge = React.createClass({
         return (
             <View style={{flex:1,backgroundColor:'gray',flexDirection: 'column'}}>
 
-                <ActionSheet style = {{flex:1,backgroundColor:'white'}}>
+                <Text style={{width:100,height:50,backgroundColor:'red',marginTop:100,marginLeft:100}}>
+                    1231231123
+                </Text>
 
-                </ActionSheet>
+                <TouchableOpacity onPress={function(){
+                            self._clickedMe();
+                        }}>
+
+                    <Text style={{width:100,height:50,backgroundColor:'red'}}>
+                        1231231123
+                    </Text>
+                </TouchableOpacity>
 
 
             </View>
 
+    //        <ActionSheet style = {{flex:1,backgroundColor:'white'}}>
+    //
+    //</ActionSheet>
 
-    //        <Text style={{width:100,height:50,backgroundColor:'red',marginTop:100,marginLeft:100}}>
-    //1231231123
-    //</Text>
-    //
-    //<TouchableOpacity onPress={function(){
-    //                        self._clickedMe();
-    //                    }}>
-    //
-    //    <Text style={{width:100,height:50,backgroundColor:'red'}}>
-    //        1231231123
-    //    </Text>
-    //</TouchableOpacity>
+
+
 
 
             )
     },
     _clickedMe:function (){
-        //kk.showImagePicker((error, events) => {
-        //    if (error) {
-        //        console.error(error);
-        //    } else {
-        //        console.log(events);
-        //    }
-        //})
-
-
-
+        kk.showImagePicker((obj) => {
+            console.log(obj['photos']);
+        })
     }
 });
 
